@@ -9,6 +9,11 @@ Developers :
 	
 	Mahdi khoursha
 
+## Source code of front-end
+
+1. Sign up and Sign in pages : https://colorlib.com/wp/template/colorlib-regform-7/
+2. Home page : https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+
 ## Requirements.txt
     Flask
     Flask-SQLAlchemy
