@@ -29,3 +29,7 @@ Thanks to the https://github.com/JeeveshN/Library-Managment-System fot his works
 We correct all this code mistakes and adjusted it to work fine
 ```
 
+## Acknowledgments
+```
+I sincerely thank my good friend and colleague M.S. Rezvan Nankali for her generous help.
+```
