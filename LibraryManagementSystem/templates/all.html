@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <title>Data Table</title>
+        <link rel="stylesheet" href="{{ url_for("static",filename="css/style-all.css") }}">
+<head>
+  <body >
+<div>
+<div class="table-title">
+<h3>DataBase</h3>
+<a href="{{ url_for('admin') }}"><button type="submit">Admin Panel</button></a>
+<br><br>
+</div>
+<table class="table-fill">
+<thead>
+{% if query == "user" %}
+<tr>
+<th class="text-left">Name</th>
+<th class="text-left">number</th>
+<th class="text-left">E-mail</th>
+<th class="text-left" colspan="3" rowspan="3">Books</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+{% for user in users %}
+<tr>
+<td class="text-left">{{ user.name }}</td>
+<td class="text-left">{{ user.number }}</td>
+<td class="text-left">{{ user.email }}</td>
+<td class="text-left">
+{% for book in books %}
+<ul>
+<li>NAME:&nbsp&nbsp&nbsp{{ book.name }}</li>
+<li>Issued On:&nbsp&nbsp&nbsp{{ book.issued_on.date() }}</li>
+<li>To Be Returned On:&nbsp&nbsp&nbsp{{ book.to_be_returned.date() }}</li>
+<li>Serial No.:&nbsp&nbsp&nbsp{{ book.serialno }}
+</li>
+</ul>
+<br>
+<br>
+{% endfor %}
+</td>
+
+</tr>
+{% endfor %}
+{% else %}
+<tr>
+<th class="text-left">Name</th>
+<th class="text-left">author</th>
+<th class="text-left">Quantity</th>
+<th class="text-left">Section</th>
+<th class="text-left">Serial No.</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+{% for book in books %}
+<tr>
+<td class="text-left">{{ book.name }}</td>
+<td class="text-left">{{ book.author }}</td>
+<td class="text-left">{{ book.quantity }}</td>
+<td class="text-left">{{ book.section }}</td>
+<td class="text-left">{{ book.serialno }}</td>
+</tr>
+{% endfor %}
+{% endif %}
+
+
+</tbody>
+</table>
+</div>
+<div class="spacer">
+</div>
+
+  <div class="footer">
+    <div class="name">
+      <div>Copyright &copy; <span>Nankali_Kargar</span></div>
+  </div>
+</body>
+</html>
