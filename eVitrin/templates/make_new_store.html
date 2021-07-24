@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Make Store</title>
+  
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  
+  <!-- Font Icon -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='fonts/material-icon/css/material-design-iconic-font.min.css') }}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+	
+	  <!-- Favicons -->
+  <link href="{{ url_for('static',filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static',filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static',filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static',filename='assets/css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="{{url_for('home')}}">Home</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <div class="main">
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+								      {% for message in get_flashed_messages()%}
+      {{ message }}
+      {% endfor %}
+                        <h2 class="form-title">Your Store</h2>
+                        <form action="{{ url_for('makestore') }}" method="post" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"></label>
+                                <input type="text" name="name" id="name" placeholder="Store Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"></label>
+                                <input type="text" name="email" id="email" placeholder="City"/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+					<div class="signup-image">
+                        <figure><img src="{{ url_for('static',filename='images/shop-icon.png') }}" alt="image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</div>
+</body>
+</html>

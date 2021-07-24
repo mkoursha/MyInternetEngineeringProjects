@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Home</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{{ url_for('static',filename='assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ url_for('static',filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static',filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static',filename='assets/css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div id="logo">
+                <h1><a href="#"><span>e</span>Vitrin</a></h1>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                    <li class="dropdown"><a href="#"><span>Sign In/Up</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{{ url_for('login')}}">Sign In</a></li>
+                            <li><a href="{{ url_for('register')}}">Sign Up</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-in">&nbsp;
+            <h4>شاعر میگه</h4>
+            <h2>تا لایکو پس نگیریم آروم نمیگیگیریم</h2>
+            <img src="{{ url_for('static',filename='assets/img/hero-img.png') }}" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+            <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <main id="main">
+
+        <!-- ======= Get Started Section ======= -->
+        <section id="get-started" class="padd-section text-center">
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+
+                    <h2>easy to use </h2>
+                    <p class="separator">free to use .</p>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="feature-block">
+
+                            <img src="{{ url_for('static',filename='assets/img/svg/cloud.svg') }}" alt="img">
+                            <h4>find what you want</h4>
+                            <p>explore among thounds of products and see your faivorites</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="feature-block">
+
+                            <img src="{{ url_for('static',filename='assets/img/svg/planet.svg') }}" alt="img">
+                            <h4>user friendly interface</h4>
+                            <p>everyone can easily use our web site</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="feature-block">
+
+                            <img src="{{ url_for('static',filename='assets/img/svg/asteroid.svg') }}" alt="img">
+                            <h4>upgrade your product quality</h4>
+                            <p>by the feedbacks that you get make your products better</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- End Get Started Section -->
+
+        <!-- ======= Video Section ======= -->
+        <section id="video" class="text-center">
+            <div class="overlay">
+                <div class="container-fluid container-full" data-aos="zoom-in">
+
+                    <div class="row">
+                        <a href="../static/images/YouCut_20210705_134006833.mp4" class="glightbox play-btn"></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Video Section -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="padd-section text-center">
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+
+                    <h2>Team Member</h2>
+                    <p class="separator">Our expert , numerous , adult team.</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="team-block bottom">
+                            <img src="{{ url_for('static',filename='assets/img/team/1.jpg') }}" class="img-responsive" alt="img">
+                            <div class="team-content">
+                                <span>Manager-Developer</span>
+                                <h4>Mohammad hosein khaksar</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="team-block bottom">
+                            <img src="{{ url_for('static',filename='assets/img/team/2.jpg') }}" class="img-responsive" alt="img">
+                            <div class="team-content">
+                                <span>Developer</span>
+                                <h4>Mahdi khoursha</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="team-block bottom">
+                            <img src="{{ url_for('static',filename='assets/img/team/3.jpg') }}" class="img-responsive" alt="img">
+                            <div class="team-content">
+                                <span>Developer</span>
+                                <h4>Asghar Davoodi</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Team Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="padd-section text-center">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-center">
+
+                    <div class="col-md-8">
+
+                        <div class="testimonials-content">
+                            <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
+
+                                <div class="carousel-inner" role="listbox">
+
+                                    <div class="carousel-item  active">
+                                        <div class="top-top">
+
+                                            <h2>Our Users Speack volumes us</h2>
+                                            <p>that was wonderful. You saved my industry. very good. very easy. very safe.</p>
+                                            <h4>JortanAli Kavakebian<span>CEO at Onja</span></h4>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item ">
+                                        <div class="top-top">
+
+                                            <h2>Our Users Speack volumes us</h2>
+                                            <p>What can i say about this great application. thank you. a great team and great product.</p>
+                                            <h4>Hassan Ami<span>CTO at Inja</span></h4>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item ">
+                                        <div class="top-top">
+
+                                            <h2>Our Users Speack volumes us</h2>
+                                            <p>in the world there is nothing as good as your job. keep going . i approtiate to be one little part this geneous work.</p>
+                                            <h4>John Snow<span>King of the North</span></h4>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="btm-btm">
+
+                                    <ul class="list-unstyled carousel-indicators">
+                                        <li data-bs-target="#carousel-example-generic" data-bs-slide-to="0" class="active"></li>
+                                        <li data-bs-target="#carousel-example-generic" data-bs-slide-to="1"></li>
+                                        <li data-bs-target="#carousel-example-generic" data-bs-slide-to="2"></li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Testimonials Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="padd-section">
+
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+                    <h2>Contact</h2>
+                    <p class="separator">we approtiate your useful guidance via sending an email</p>
+                </div>
+
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="col-lg-3 col-md-4">
+
+                        <div class="info">
+                            <div>
+                                <i class="bi bi-geo-alt"></i>
+                                <p>Solar system, Earth planet<br>Asia, Iran 2021</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <p>info@example.com</p>
+                            </div>
+
+                            <div>
+                                <i class="bi bi-phone"></i>
+                                <p>+98 123-456-7890</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-5 col-md-8">
+                        <div class="form">
+                            <form action="#" method="post" role="form" class="php-email-form">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="my-3">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                </div>
+                                <div class="text-center"><button type="submit">Send Message</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-lg-4">
+                    <div class="footer-logo">
+
+                        <a class="navbar-brand" href="#">eVitrin</a>
+                        <p>We are a Startup that located in your heart.The poet says that : "Ta Like o pas nagirim Arom nemigigirim"</p>
+
+                    </div>
+            </div>
+        </div>
+
+        <div class="copyrights">
+            <div class="container">
+                <p>&copy; Copyrights eVitrin. All rights reserved.</p>
+                <div class="credits">
+                    Designed by Us
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End  Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static',filename='assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ url_for('static',filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>
